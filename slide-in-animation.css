@@ -1,0 +1,64 @@
+@keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      body {
+        background: linear-gradient(141deg, rgb(109, 79, 179) 0%, rgb(0, 0, 46) 51%, rgb(62, 34, 126) 75%);
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+      }
+/* Slide-in animation for content blocks */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.8s ease forwards;
+}
+
+/* Optional: slide in from right */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.8s ease forwards;
+}
+
+/* Usage example:
+<div class="slide-in-left">Content block</div>
+or
+<div class="slide-in-right">Content block</div>
+*/
+
+/* Hover effect for project cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(109, 79, 179, 0.6);
+}
